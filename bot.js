@@ -42,9 +42,9 @@ function postMessage(type) {
   } else if (type == 2) {
   	botResponse = '*ichigan sucks';
   } else if (type == 3) {
-  	botResponse = 'Shut up';
+  	botResponse = 'Shut up.';
   } else if (type == 4) {
-  	botResponse = 'I LOVE YOU BEN!' + String.fromCodePoint(U+1F49C);
+  	botResponse = 'I LOVE YOU BEN!';
   }
   //botResponse = cool();
 
