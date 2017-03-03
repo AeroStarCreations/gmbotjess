@@ -33,12 +33,7 @@ function respond() {
   	postMessage(4);
   	this.res.end();
   }
-  
-  if (request.text.search(/scott/i) > -1 || request.text.search(/food/i) > -1 && request.user_id != 29948664) { // scott
-  	this.res.writeHead(200);
-  	postMessage(5);
-  	this.res.end();
-  }
+
 }
 
 function postMessage(type) {
@@ -59,19 +54,6 @@ function postMessage(type) {
   	  //botResponse = 'I LOVE YOU BEN!';
   	  body.picture_url = 'http://www.relatably.com/m/img/broken-arm-memes/vy0eI72.jpg';
   	  break;
-  	case 5:
-  	  botResponse = '@Nathan Balli';
-  	  //body.attachments = {"type":"mentions", "user_ids":["29948664"], "loci":[0,13]};
-  	  body = {
-  	  	'text': '@Nathan Balli',
-  	  	'bot_id': botID,
-  	  	'attachments': {
-  	  			"loci": [0,13],
-  	  			"type": "mentions",
-  	  			"user_ids": ["29948664"]
-  	  	}
-  	  }
-  	  break;
   	default:  
   }
 
@@ -80,12 +62,12 @@ function postMessage(type) {
     path: '/v3/bots/post',
     method: 'POST'
   };
-/*
+
   body = {
     "bot_id" : botID,
     "text" : botResponse
   };
-*/
+
   console.log('sending ' + botResponse + ' to ' + botID);
 
   botReq = HTTPS.request(options, function(res) {
