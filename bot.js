@@ -9,7 +9,7 @@ function respond() {
       botTruth   = /^\/truth$/;
   
   console.log('NICOLE NASSIF = ' + request.user_id);
-  console.lot('should be     = 20120116');
+  console.log('should be     = 20120116');
   
   if(request.text && botRegex.test(request.text)) { // Send face
     this.res.writeHead(200);
