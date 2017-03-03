@@ -26,7 +26,7 @@ function respond() {
 function postMessage() {
   var botResponse, options, body, botReq;
 
-  botResponse = '*ichigan sucks';
+  botResponse = cool();
 
   options = {
     hostname: 'api.groupme.com',
@@ -60,6 +60,8 @@ function postMessage() {
 
 function postTruthMessage() {
   var botResponse, options, body, botReq;
+  
+  botResponse = '*ichigan sucks';
   
   options = {
     hostname: 'api.groupme.com',
