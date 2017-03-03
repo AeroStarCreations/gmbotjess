@@ -14,7 +14,7 @@ function respond() {
     this.res.end();
   } else if(request.text && botTruth.test(request.text)) {
   	this.res.writeHead(200);
-  	postTruthMessage();
+  	postMessage(2);
   	this.res.end();
   } else {
     console.log("don't care");
@@ -26,7 +26,12 @@ function respond() {
 function postMessage(type) {
   var botResponse, options, body, botReq;
 
-  botResponse = cool();
+  if (type == 1) {
+  	botResponse = cool();
+  } else if (type == 2) {
+  	botResponse = '*ichigan sucks';
+  }
+  //botResponse = cool();
 
   options = {
     hostname: 'api.groupme.com',
