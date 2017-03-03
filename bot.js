@@ -7,9 +7,7 @@ function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\/cool$/,
       botTruth   = /^\/truth$/;
-  console.log('botRegex : ' + botRegex);
-  console.log('botTruth : ' + botTruth);
-  console.log('request : ' + request.text);
+  
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
     postMessage();
@@ -92,7 +90,7 @@ function postTruthMessage() {
   botReq.on('timeout', function(err) {
     console.log('timeout posting message '  + JSON.stringify(err));
   });
-  botReq.end(JSON.stringify(body));
+  //botReq.end(JSON.stringify(body));
 }
 
 
