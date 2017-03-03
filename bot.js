@@ -40,7 +40,7 @@ function respond() {
 }
 
 function postMessage(type) {
-  var botResponse, options, body, botReq;
+  var botResponse, options, body = {}, botReq;
 
   switch (type) {
   	case 1:
@@ -59,7 +59,7 @@ function postMessage(type) {
   	  break;
   	case 5:
   	  botResponse = '@Nathan Balli';
-  	  body.attachments = {'type':'mentions', 'user_ids':[29948664], 'loci':[0,13]};
+  	  body.attachments = {"type":'mentions', "user_ids":[29948664], "loci":[0,13]};
   	  break;
   	default:  
   }
