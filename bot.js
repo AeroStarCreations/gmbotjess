@@ -8,9 +8,6 @@ function respond() {
       botRegex = /^\/cool$/,
       botTruth   = /^\/truth$/;
   
-  console.log('NICOLE NASSIF = ' + request.user_id);
-  console.log('should be     = 20120116');
-  
   if (request.user_id == 20120116) { // Nicole shut up
   	this.res.writeHead(200);
   	postMessage(3);
@@ -50,7 +47,9 @@ function postMessage(type) {
   	  botResponse = 'Shut up.';
   	  break;
   	case 4:
-  	  botResponse = 'I LOVE YOU BEN!';
+  	  botResponse = '';
+  	  //botResponse = 'I LOVE YOU BEN!';
+  	  body.picture_url = 'http://www.relatably.com/m/img/broken-arm-memes/vy0eI72.jpg';
   	  break;
   	default:  
   }
