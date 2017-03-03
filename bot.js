@@ -11,7 +11,11 @@ function respond() {
   console.log('NICOLE NASSIF = ' + request.user_id);
   console.log('should be     = 20120116');
   
-  if(request.text && botRegex.test(request.text)) { // Send face
+  if (request.user_id == 20120116) {
+  	this.res.writeHead(200);
+  	postMessage(3);
+  	this.res.end();
+  } else if(request.text && botRegex.test(request.text)) { // Send face
     this.res.writeHead(200);
     postMessage(1);
     this.res.end();
@@ -33,6 +37,8 @@ function postMessage(type) {
   	botResponse = cool();
   } else if (type == 2) {
   	botResponse = '*ichigan sucks';
+  } else if (type == 3) {
+  	botResponse = 'Shut up';
   }
   //botResponse = cool();
 
