@@ -60,22 +60,22 @@ function postMessage() {
 
 function postTruthMessage() {
   var botResponse, options, body, botReq;
-  
+
   botResponse = '*ichigan sucks';
-  
+
   options = {
     hostname: 'api.groupme.com',
     path: '/v3/bots/post',
     method: 'POST'
   };
-  
+
   body = {
     "bot_id" : botID,
     "text" : botResponse
   };
 
   console.log('sending ' + botResponse + ' to ' + botID);
-  
+
   botReq = HTTPS.request(options, function(res) {
       if(res.statusCode == 202) {
         //neat
