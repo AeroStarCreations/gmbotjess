@@ -8,6 +8,8 @@ function respond() {
       botRegex = /^\/cool$/,
       botTruth = /^\/truth$/;
   
+  console.log(request.name + "  " + request.user_id);
+  
   if (request.user_id == 20120116) { // Nicole shut up
   	this.res.writeHead(200);
   	postMessage(3);
