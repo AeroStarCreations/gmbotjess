@@ -6,7 +6,7 @@ var botID = process.env.BOT_ID;
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\/cool$/,
-      botTruth   = /^\/truth$/;
+      botTruth = /^\/truth$/;
   
   if (request.user_id == 20120116) { // Nicole shut up
   	this.res.writeHead(200);
@@ -31,6 +31,12 @@ function respond() {
   	postMessage(4);
   	this.res.end();
   }
+  
+  if (request.text.search(/scott/i) > -1 || request.text.search(/food/i) > -1 && request.user_id != 29948664) { // scott
+  	this.res.writeHead(200);
+  	postMessage(5);
+  	this.res.end();
+  }
 }
 
 function postMessage(type) {
@@ -50,6 +56,10 @@ function postMessage(type) {
   	  botResponse = '';
   	  //botResponse = 'I LOVE YOU BEN!';
   	  body.picture_url = 'http://www.relatably.com/m/img/broken-arm-memes/vy0eI72.jpg';
+  	  break;
+  	case 5:
+  	  botResponse = '@Nathan Balli';
+  	  body.attachments = [{"type":"mentions", "user_ids":[29948664], "loci":[[0,13]]}];
   	  break;
   	default:  
   }
