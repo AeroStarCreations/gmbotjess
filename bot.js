@@ -15,10 +15,6 @@ function respond() {
   	this.res.writeHead(200);
   	postMessage(3);
   	this.res.end();
-  } else if(request.user_id == 19104333) {
-  	this.res.writeHead(200);
-  	postMessage(4);
-  	this.res.end();
   } else if(request.text && botRegex.test(request.text)) { // Send face
     this.res.writeHead(200);
     postMessage(1);
@@ -32,21 +28,32 @@ function respond() {
     this.res.writeHead(200);
     this.res.end();
   }
+  
+  if (request.user_id == 19104333) { // Love Ben
+  	this.res.writeHead(200);
+  	postMessage(4);
+  	this.res.end();
+  }
 }
 
 function postMessage(type) {
   var botResponse, options, body, botReq;
 
-  if (type == 1) {
-  	botResponse = cool();
-  } else if (type == 2) {
-  	botResponse = '*ichigan sucks';
-  } else if (type == 3) {
-  	botResponse = 'Shut up.';
-  } else if (type == 4) {
-  	botResponse = 'I LOVE YOU BEN!';
+  switch (type) {
+  	case 1:
+  	  botResponse = cool();
+  	  break;
+  	case 2:
+  	  botResponse = '*ichigan sucks';
+  	  break;
+  	case 3:
+  	  botResponse = 'Shut up.';
+  	  break;
+  	case 4:
+  	  botResponse = 'I LOVE YOU BEN!';
+  	  break;
+  	default:  
   }
-  //botResponse = cool();
 
   options = {
     hostname: 'api.groupme.com',
