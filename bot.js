@@ -11,9 +11,13 @@ function respond() {
   console.log('NICOLE NASSIF = ' + request.user_id);
   console.log('should be     = 20120116');
   
-  if (request.user_id == 20120116) {
+  if (request.user_id == 20120116) { // Nicole shut up
   	this.res.writeHead(200);
   	postMessage(3);
+  	this.res.end();
+  } else if(request.user_id == 19104333) {
+  	this.res.writeHead(200);
+  	postMessage(4);
   	this.res.end();
   } else if(request.text && botRegex.test(request.text)) { // Send face
     this.res.writeHead(200);
@@ -39,6 +43,8 @@ function postMessage(type) {
   	botResponse = '*ichigan sucks';
   } else if (type == 3) {
   	botResponse = 'Shut up';
+  } else if (type == 4) {
+  	botResponse = 'I LOVE YOU BEN!' = String.fromCodePoint(U+1F49C);
   }
   //botResponse = cool();
 
