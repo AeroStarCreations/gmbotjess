@@ -62,22 +62,14 @@ function postMessage(type) {
   	case 5:
   	  botResponse = '@Nathan Balli';
   	  //body.attachments = {"type":"mentions", "user_ids":["29948664"], "loci":[0,13]};
-  	  body = {
-  	  	"attachments": [
-  	  		{
-  	  			"loci": [
-  	  				[
-  	  					0,
-  	  					13
-  	  				]
-  	  			],
+  	  body = 
+  	  	'text': '@Nathan Balli',
+  	  	'bot_id': botID,
+  	  	'attachments': [
+  	  			"loci": [0,13],
   	  			"type": "mentions",
-  	  			"user_ids": [
-  	  				"29948664"
-  	  			]
-  	  		}
+  	  			"user_ids": ["29948664"]
   	  	]
-  	  }
   	  break;
   	default:  
   }
@@ -87,12 +79,12 @@ function postMessage(type) {
     path: '/v3/bots/post',
     method: 'POST'
   };
-
+/*
   body = {
     "bot_id" : botID,
     "text" : botResponse
   };
-
+*/
   console.log('sending ' + botResponse + ' to ' + botID);
 
   botReq = HTTPS.request(options, function(res) {
