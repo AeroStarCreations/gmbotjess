@@ -65,11 +65,11 @@ function postMessage(type) {
   	  body = {
   	  	'text': '@Nathan Balli',
   	  	'bot_id': botID,
-  	  	'attachments': [
+  	  	'attachments': {
   	  			"loci": [0,13],
   	  			"type": "mentions",
   	  			"user_ids": ["29948664"]
-  	  	]
+  	  	}
   	  }
   	  break;
   	default:  
