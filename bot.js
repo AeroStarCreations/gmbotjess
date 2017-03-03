@@ -55,7 +55,7 @@ function postMessage() {
   botReq.on('timeout', function(err) {
     console.log('timeout posting message '  + JSON.stringify(err));
   });
-  botReq.end(JSON.stringify(body));
+  botReq.end(JSON.stringify(body)); // THIS LINE SENDS MESSAGE TO GROUP CHAT
 }
 
 function postTruthMessage() {
@@ -90,7 +90,7 @@ function postTruthMessage() {
   botReq.on('timeout', function(err) {
     console.log('timeout posting message '  + JSON.stringify(err));
   });
-  //botReq.end(JSON.stringify(body));
+  botReq.end(JSON.stringify(body));
 }
 
 
