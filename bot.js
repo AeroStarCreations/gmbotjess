@@ -10,7 +10,7 @@ function respond() {
   
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
-    postMessage();
+    postMessage(1);
     this.res.end();
   } else if(request.text && botTruth.test(request.text)) {
   	this.res.writeHead(200);
@@ -23,7 +23,7 @@ function respond() {
   }
 }
 
-function postMessage() {
+function postMessage(type) {
   var botResponse, options, body, botReq;
 
   botResponse = cool();
