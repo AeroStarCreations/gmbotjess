@@ -50,9 +50,7 @@ function postMessage(type) {
   	  botResponse = 'Shut up.';
   	  break;
   	case 4:
-  	  botResponse = '';
-  	  //botResponse = 'I LOVE YOU BEN!';
-  	  body.picture_url = 'http://www.relatably.com/m/img/broken-arm-memes/vy0eI72.jpg';
+  	  botResponse = 'I LOVE YOU BEN!';
   	  break;
   	default:  
   }
