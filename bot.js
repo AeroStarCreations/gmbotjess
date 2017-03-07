@@ -47,7 +47,7 @@ function postMessage(type) {
   	  botResponse = '*ichigan sucks';
   	  break;
   	case 3:
-  	  botResponse = 'Shut up.';
+  	  botResponse = 'Thank you for your input, Nicole. :)';
   	  break;
   	case 4:
   	  botResponse = 'I LOVE YOU BEN!';
