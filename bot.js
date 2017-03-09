@@ -47,10 +47,10 @@ function postMessage(type) {
   	  botResponse = '*ichigan sucks';
   	  break;
   	case 3:
-  	  botResponse = 'Thank you for your input, Nicole. :)';
+  	  botResponse = 'Zack loves me more';
   	  break;
   	case 4:
-  	  botResponse = 'I LOVE YOU BEN!';
+  	  botResponse = 'Benjamin Higgins. Just as I suspected...';
   	  break;
   	default:  
   }
