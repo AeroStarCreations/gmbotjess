@@ -47,7 +47,7 @@ function postMessage(type) {
   	  botResponse = '*ichigan sucks';
   	  break;
   	case 3:
-  	  botResponse = 'Zack loves me more';
+  	  botResponse = 'Zach loves me more';
   	  break;
   	case 4:
   	  botResponse = 'Benjamin Higgins. Just as I suspected...';
