@@ -9,7 +9,7 @@ function respond() {
       botTruth = /^\/truth$/;
   
   console.log(request.name + "  " + request.user_id);
-  
+  /*
   if (request.user_id == 20120116) { // Nicole shut up
   	this.res.writeHead(200);
   	postMessage(3);
@@ -33,7 +33,7 @@ function respond() {
   	postMessage(4);
   	this.res.end();
   }
-
+  */
 }
 
 function postMessage(type) {
